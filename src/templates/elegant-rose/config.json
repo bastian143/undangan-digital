@@ -1,0 +1,26 @@
+{
+  "name": "Elegant Rose",
+  "slug": "elegant-rose",
+  "category": "elegant",
+  "description": "Template elegan dengan tema mawar dusty rose dan aksen emas. Cocok untuk pernikahan yang anggun dan romantis.",
+  "features": {
+    "hasCover": true,
+    "hasAutoScroll": true,
+    "hasCountdown": true,
+    "hasGallery": true,
+    "hasLoveStory": true,
+    "hasRSVP": true,
+    "hasWishes": true,
+    "hasGift": true,
+    "hasMusic": true,
+    "hasMap": true,
+    "hasQRCode": true
+  },
+  "colors": {
+    "primary": "#D4A5A5",
+    "secondary": "#FFF8F0",
+    "accent": "#C9A96E",
+    "background": "#FFF8F0",
+    "text": "#3D2B1F"
+  }
+}

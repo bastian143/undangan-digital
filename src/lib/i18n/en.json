@@ -1,0 +1,84 @@
+{
+  "cover": {
+    "dear": "Dear",
+    "guest": "Valued Guest",
+    "openButton": "Open Invitation"
+  },
+  "couple": {
+    "son": "Son",
+    "daughter": "Daughter",
+    "of": "of",
+    "and": "&"
+  },
+  "countdown": {
+    "title": "Counting the Days",
+    "days": "Days",
+    "hours": "Hours",
+    "minutes": "Minutes",
+    "seconds": "Seconds",
+    "expired": "The event has passed"
+  },
+  "event": {
+    "title": "Event Details",
+    "date": "Date",
+    "time": "Time",
+    "location": "Location",
+    "viewMap": "View Location",
+    "saveDate": "Save the Date"
+  },
+  "gallery": {
+    "title": "Photo Gallery",
+    "subtitle": "Our beautiful moments"
+  },
+  "loveStory": {
+    "title": "Our Love Story",
+    "subtitle": "The journey of our love"
+  },
+  "rsvp": {
+    "title": "RSVP",
+    "subtitle": "Please confirm your attendance",
+    "name": "Full Name",
+    "namePlaceholder": "Enter your name",
+    "attending": "Attending",
+    "notAttending": "Not Attending",
+    "guestCount": "Number of Guests",
+    "submit": "Submit RSVP",
+    "success": "Thank you! Your confirmation has been received.",
+    "alreadySubmitted": "You have already confirmed your attendance."
+  },
+  "wishes": {
+    "title": "Wishes & Prayers",
+    "subtitle": "Send your wishes and prayers to the couple",
+    "name": "Name",
+    "namePlaceholder": "Your name",
+    "message": "Message",
+    "messagePlaceholder": "Write your wishes and prayers...",
+    "attendance": "Attendance",
+    "submit": "Send Wishes",
+    "success": "Thank you for your wishes! 🙏"
+  },
+  "gift": {
+    "title": "Digital Envelope",
+    "subtitle": "Your blessing means the world to us. However, if you wish to give a gift, we humbly accept.",
+    "copyAccount": "Copy",
+    "copied": "Copied!",
+    "sendGift": "Send Gift"
+  },
+  "share": {
+    "title": "Share Invitation",
+    "whatsapp": "Share via WhatsApp",
+    "copyLink": "Copy Link",
+    "copied": "Link copied!"
+  },
+  "footer": {
+    "poweredBy": "Made with",
+    "by": "by"
+  },
+  "music": {
+    "play": "Play music",
+    "pause": "Pause music"
+  },
+  "quote": {
+    "title": "Holy Verse"
+  }
+}

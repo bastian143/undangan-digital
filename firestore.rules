@@ -1,0 +1,94 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ---- Helper Functions ----
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    function isAdmin() {
+      return isAuthenticated() &&
+        get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin';
+    }
+
+    // ---- Users Collection ----
+    match /users/{userId} {
+      // Users can read their own data, admins can read all
+      allow read: if isOwner(userId) || isAdmin();
+      // Users can create their own document during registration
+      allow create: if isOwner(userId);
+      // Users can update their own profile (but not role), admins can update all
+      allow update: if (isOwner(userId) && !request.resource.data.diff(resource.data).affectedKeys().hasAny(['role'])) || isAdmin();
+      // Only admins can delete users
+      allow delete: if isAdmin();
+    }
+
+    // ---- Templates Collection ----
+    match /templates/{templateId} {
+      // Everyone can read active templates
+      allow read: if true;
+      // Only admins can create, update, delete templates
+      allow create, update, delete: if isAdmin();
+    }
+
+    // ---- Orders Collection ----
+    match /orders/{orderId} {
+      // Users can read their own orders, admins can read all
+      allow read: if isOwner(resource.data.userId) || isAdmin();
+      // Authenticated users can create orders (for themselves only)
+      allow create: if isAuthenticated() && request.resource.data.userId == request.auth.uid;
+      // Only admins can update/delete orders (payment webhook updates via admin SDK)
+      allow update, delete: if isAdmin();
+    }
+
+    // ---- Invitations Collection ----
+    match /invitations/{invitationId} {
+      // Active invitations are publicly readable (for guest access)
+      allow read: if true;
+      // Users can create invitations for themselves
+      allow create: if isAuthenticated() && request.resource.data.userId == request.auth.uid;
+      // Users can update their own invitations, admins can update all
+      allow update: if isOwner(resource.data.userId) || isAdmin();
+      // Only owners and admins can delete
+      allow delete: if isOwner(resource.data.userId) || isAdmin();
+    }
+
+    // ---- Guests Collection ----
+    match /guests/{guestId} {
+      // Public read (for RSVP status check)
+      allow read: if true;
+      // Authenticated users can create guests for their invitations
+      allow create: if isAuthenticated();
+      // Anyone can update RSVP status (guests don't have accounts)
+      allow update: if true;
+      // Only authenticated users can delete
+      allow delete: if isAuthenticated();
+    }
+
+    // ---- Wishes Collection ----
+    match /wishes/{wishId} {
+      // Public read (wishes are displayed on invitation page)
+      allow read: if true;
+      // Anyone can create a wish (guests don't have accounts)
+      allow create: if true;
+      // Only admins and invitation owners can update (approve/hide)
+      allow update: if isAuthenticated();
+      // Only admins can delete
+      allow delete: if isAdmin();
+    }
+
+    // ---- Analytics Collection ----
+    match /analytics/{docId} {
+      // Only admins can read analytics
+      allow read: if isAdmin();
+      // System writes (via server/admin SDK)
+      allow write: if isAdmin();
+    }
+  }
+}

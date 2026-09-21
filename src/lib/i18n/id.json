@@ -1,0 +1,84 @@
+{
+  "cover": {
+    "dear": "Kepada Yth.",
+    "guest": "Tamu Undangan",
+    "openButton": "Buka Undangan"
+  },
+  "couple": {
+    "son": "Putra",
+    "daughter": "Putri",
+    "of": "dari pasangan",
+    "and": "&"
+  },
+  "countdown": {
+    "title": "Menghitung Hari",
+    "days": "Hari",
+    "hours": "Jam",
+    "minutes": "Menit",
+    "seconds": "Detik",
+    "expired": "Acara telah berlangsung"
+  },
+  "event": {
+    "title": "Detail Acara",
+    "date": "Tanggal",
+    "time": "Waktu",
+    "location": "Lokasi",
+    "viewMap": "Lihat Lokasi",
+    "saveDate": "Simpan Tanggal"
+  },
+  "gallery": {
+    "title": "Galeri Foto",
+    "subtitle": "Momen-momen indah kami"
+  },
+  "loveStory": {
+    "title": "Cerita Cinta Kami",
+    "subtitle": "Perjalanan kisah kami"
+  },
+  "rsvp": {
+    "title": "Konfirmasi Kehadiran",
+    "subtitle": "Mohon konfirmasi kehadiran Anda",
+    "name": "Nama Lengkap",
+    "namePlaceholder": "Masukkan nama Anda",
+    "attending": "Hadir",
+    "notAttending": "Tidak Hadir",
+    "guestCount": "Jumlah Tamu",
+    "submit": "Kirim Konfirmasi",
+    "success": "Terima kasih! Konfirmasi Anda telah diterima.",
+    "alreadySubmitted": "Anda sudah mengkonfirmasi kehadiran."
+  },
+  "wishes": {
+    "title": "Ucapan & Doa",
+    "subtitle": "Kirimkan ucapan dan doa untuk kedua mempelai",
+    "name": "Nama",
+    "namePlaceholder": "Nama Anda",
+    "message": "Ucapan",
+    "messagePlaceholder": "Tulis ucapan dan doa Anda...",
+    "attendance": "Kehadiran",
+    "submit": "Kirim Ucapan",
+    "success": "Terima kasih atas ucapan Anda! 🙏"
+  },
+  "gift": {
+    "title": "Amplop Digital",
+    "subtitle": "Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Namun, jika Anda ingin memberikan tanda kasih, kami dengan tulus menerimanya.",
+    "copyAccount": "Salin",
+    "copied": "Tersalin!",
+    "sendGift": "Kirim Hadiah"
+  },
+  "share": {
+    "title": "Bagikan Undangan",
+    "whatsapp": "Bagikan via WhatsApp",
+    "copyLink": "Salin Link",
+    "copied": "Link tersalin!"
+  },
+  "footer": {
+    "poweredBy": "Dibuat dengan",
+    "by": "oleh"
+  },
+  "music": {
+    "play": "Putar musik",
+    "pause": "Jeda musik"
+  },
+  "quote": {
+    "title": "Ayat Suci"
+  }
+}
